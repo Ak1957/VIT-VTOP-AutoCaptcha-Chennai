@@ -1,0 +1,18 @@
+{
+  "name": "AutoCaptcha for VTOPCC (Chennai)",
+  "version": "0.1.0",
+  "author": "Ayush Kumar",
+  "description": "Autofills captcha in VIT Academics Page (http://vtopcc.vit.ac.in)",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://vtopcc.vit.ac.in/*"],
+	  "css": [ "sweetalert.css" ],
+      "js": ["captcha.js","jquery.blockUI.js","jquery-3.3.1.js","jquery-ui.js","vtop-validation.js", "sweetalert-dev.js"]
+    }
+  ],
+  "permissions":["tabs","*://vtopcc.vit.ac.in/*", "webNavigation","storage"],
+  "manifest_version": 2
+}
